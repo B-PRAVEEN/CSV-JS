@@ -346,7 +346,7 @@
             if (typeof module != 'undefined' && module.exports) module.exports = definition();
             else if (typeof define == 'function' && typeof define.amd == 'object') define(definition);
             else context[name] = definition();
-        }('CSV', function(){return this;}(), function()
+        }('CSV', Function('return this')(), function()
             { return CSV; }
         )
     );
